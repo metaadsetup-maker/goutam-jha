@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Stock market educational updates and market analysis.">
 <title>Stock Learners - Educational Updates</title>
 
 <!-- Meta Pixel -->
@@ -33,109 +32,143 @@ fbq('init','2260184181498951');
 fbq('track','PageView');
 </script>
 
-<noscript>
-<img height="1"
-     width="1"
-     style="display:none"
-     src="https://www.facebook.com/tr?id=2260184181498951&ev=PageView&noscript=1">
-</noscript>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <main class="page">
-
 <section class="card">
 
-<!-- Profile Photo -->
+<!-- PROFILE -->
 <div class="profile-box">
-  <a href="https://t.me/+BCwEQDmHTqYwNGY9"
-     target="_blank"
-     rel="noopener noreferrer"
-     onclick="trackTelegramClick()">
+<a href="https://t.me/+BCwEQDmHTqYwNGY9"
+   target="_blank"
+   rel="noopener noreferrer"
+   onclick="trackTelegramClick()">
 
-    <img src="profile.png"
-         alt="Stock Learners"
-         class="profile">
+<img src="profile.png"
+     alt="Stock Learners"
+     class="profile">
 
-  </a>
+</a>
 </div>
 
-
-<!-- Heading -->
+<!-- NAME -->
 <h1>
 STOCK LEARNERS™ [GOUTAM JHA]
 <br>
 ((EDUCATIONAL))
 </h1>
 
-
-<!-- Subtitle -->
 <p class="subtitle">
 Daily Market Updates
 </p>
 
-
-<!-- Topics -->
 <p class="topics">
 NIFTY · BANKNIFTY · STOCK OPTIONS
 </p>
 
-
-<!-- Telegram Button -->
+<!-- TELEGRAM BUTTON -->
 <a class="telegram-btn"
    href="https://t.me/+BCwEQDmHTqYwNGY9"
    target="_blank"
    rel="noopener noreferrer"
    onclick="trackTelegramClick()">
 
-   Join Free Telegram Channel
+Join Free Telegram Channel
 
 </a>
 
-
-<!-- Features -->
+<!-- FEATURES -->
 <div class="features">
 
-  <div class="feature">
-    ✓ Daily Market Updates
-  </div>
+<div class="feature">
+✓ Daily Market Updates
+</div>
 
-  <div class="feature">
-    ✓ F&amp;O Views for Educational Purposes
-  </div>
+<div class="feature">
+✓ F&amp;O Views for Educational Purposes
+</div>
 
-  <div class="feature">
-    ✓ Market Learning &amp; Analysis
-  </div>
+<div class="feature">
+✓ Market Learning &amp; Analysis
+</div>
 
 </div>
 
-
-<!-- Disclaimer -->
+<!-- DISCLAIMER -->
 <p class="disclaimer">
 This page provides educational and informational content only.
-Trading and investing involve market risk. This is not investment advice
-or a recommendation to buy or sell securities.
+Trading and investing involve market risk.
+This is not investment advice or a recommendation to buy or sell securities.
 </p>
 
+<!-- COUNTDOWN - LAST -->
+<div id="countdown" class="countdown">2</div>
 
-<!-- Countdown - बिल्कुल सबसे नीचे -->
-<div id="countdown" class="countdown">
-2
-</div>
-
-<p class="countdown-text">
+<p id="countdownText" class="countdown-text">
 Please wait...
 </p>
 
 </section>
-
 </main>
 
-<script src="script.js"></script>
+
+<!-- ALL JAVASCRIPT DIRECTLY HERE -->
+<script>
+
+function trackTelegramClick() {
+
+  if (typeof fbq === "function") {
+    fbq("track", "Contact");
+    fbq("trackCustom", "TelegramClick");
+  }
+
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  var countdown = document.getElementById("countdown");
+  var countdownText = document.getElementById("countdownText");
+
+  var seconds = 2;
+
+  countdown.innerHTML = seconds;
+
+
+  var timer = setInterval(function() {
+
+    seconds = seconds - 1;
+
+    if (seconds > 0) {
+
+      countdown.innerHTML = seconds;
+
+    } else {
+
+      clearInterval(timer);
+
+      countdown.innerHTML = "✓";
+      countdownText.innerHTML = "Opening Telegram...";
+
+      trackTelegramClick();
+
+      setTimeout(function() {
+
+        window.location.href =
+        "https://t.me/+BCwEQDmHTqYwNGY9";
+
+      }, 300);
+
+    }
+
+  }, 1000);
+
+});
+
+</script>
 
 </body>
 </html>
