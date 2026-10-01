@@ -1,0 +1,13 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0;min-height:100%}
+body{font-family:Arial,Helvetica,sans-serif;background:#020303;color:#fff}
+.page{min-height:100vh;padding:20px 10px;display:flex;justify-content:center}
+.card{width:100%;max-width:680px;min-height:850px;padding:52px 18px 35px;text-align:center;background:radial-gradient(circle at 50% 18%,#1b2421 0,#111717 38%,#060808 78%);border:1px solid #756300;border-radius:28px;box-shadow:0 0 35px rgba(255,210,0,.08)}
+.profile-box{display:flex;justify-content:center;margin-bottom:38px}
+.profile{width:168px;height:168px;object-fit:cover;object-position:center;border-radius:50%;border:6px solid #ffd000;box-shadow:0 0 25px rgba(255,208,0,.45)}
+h1{margin:0 0 22px;color:#ffd000;font-size:30px;line-height:1.22;font-weight:800}
+.subtitle{margin:0 0 20px;font-size:23px}.topics{margin:0 0 38px;color:#aeb2b4;font-size:17px;letter-spacing:1px}
+.telegram-btn{display:block;width:100%;padding:23px 10px;border-radius:50px;background:linear-gradient(90deg,#08b9e8,#078ff2);color:#fff;text-decoration:none;font-size:23px;font-weight:700;box-shadow:0 10px 30px rgba(0,170,255,.25);transition:.2s}
+.telegram-btn:hover{transform:scale(1.02)}.features{margin-top:38px;display:grid;gap:16px}
+.feature{padding:19px 12px;background:rgba(25,30,30,.85);border-radius:16px;color:#ddd;font-size:17px}
+.disclaimer{margin:38px 8px 0;color:#969b9d;font-size:14px;line-height:1.6}
+@media(max-width:520px){.card{padding:48px 18px 30px}.profile{width:165px;height:165px}h1{font-size:28px}.subtitle{font-size:22px}.topics{font-size:16px}.telegram-btn{font-size:22px;padding:23px 10px}.feature{font-size:17px}}
