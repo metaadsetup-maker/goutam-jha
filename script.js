@@ -1,32 +1,21 @@
-function trackTelegramClick() {
-  if (typeof fbq === "function") {
-    fbq("track", "Contact");
-    fbq("trackCustom", "TelegramClick");
-  }
+.card{
+  text-align:center;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const countdown = document.getElementById("countdown");
-  const text = document.querySelector(".countdown-text");
+.profile-box{
+  margin:0 auto 18px;
+}
 
-  if (!countdown) return;
+.telegram-btn{
+  display:block;
+  width:100%;
+  max-width:440px;
+  margin:0 auto 22px;
+}
 
-  let seconds = 2;
-  countdown.textContent = seconds;
-
-  const timer = setInterval(function () {
-    seconds--;
-
-    if (seconds > 0) {
-      countdown.textContent = seconds;
-    } else {
-      clearInterval(timer);
-      countdown.textContent = "✓";
-
-      if (text) {
-        text.textContent =
-          "Tap the profile photo or Telegram button to continue.";
-      }
-    }
-  }, 1000);
-});
+.features{
+  display:grid;
+  gap:10px;
+  margin:8px auto 20px;
+  max-width:560px;
+}
