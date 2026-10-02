@@ -1,21 +1,13 @@
-.card{
-  text-align:center;
-}
+function trackLead() {
 
-.profile-box{
-  margin:0 auto 18px;
-}
+  if (typeof fbq === "function") {
 
-.telegram-btn{
-  display:block;
-  width:100%;
-  max-width:440px;
-  margin:0 auto 22px;
-}
+    // Meta standard Lead event
+    fbq("track", "Lead");
 
-.features{
-  display:grid;
-  gap:10px;
-  margin:8px auto 20px;
-  max-width:560px;
+    // Optional custom event
+    fbq("trackCustom", "TelegramClick");
+
+  }
+
 }
